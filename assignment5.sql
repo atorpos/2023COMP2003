@@ -31,7 +31,6 @@ INSERT INTO ASSIGNMENT5 (type, name) VALUES ('name', 'Caeleb Dressel'), ('name',
 */
 
 ALTER TABLE ASSIGNMENT5 ADD COLUMN  created_date DATE DEFAULT '2020-01-01';
-
 /*
  Question 4
 
@@ -41,6 +40,7 @@ ALTER TABLE ASSIGNMENT5 ADD COLUMN  created_date DATE DEFAULT '2020-01-01';
 */
 
 ALTER TABLE ASSIGNMENT5 DROP COLUMN created_date;
+
 
 /*
  Question 5
@@ -70,12 +70,16 @@ ALTER TABLE ASSIGNMENT5 ADD COLUMN tid int DEFAULT '1', ADD COLUMN updated_time 
   INSERT records into the new table AND UPDATE the table from Question 1 with the new ID fields
   ( 10 marks )
  */
-select *
-from ASSIGNMENT5 order by id desc;
 
 CREATE TABLE ASSIGNMENT5_7 (id int auto_increment primary key , description varchar(255));
-ALTER table ASSIGNMENT5 ADD COLUMN as_id int, add foreign key (as_id) REFERENCES ASSIGNMENT5_7(id);
 
-INSERT INTO ASSIGNMENT5_7 (description)  values ('Colorado'), ('TORONTO'), ('St Louis');
+ALTER TABLE ASSIGNMENT5
+ADD COLUMN assignment5_7_id INT,
+ADD FOREIGN KEY (assignment5_7_id) REFERENCES ASSIGNMENT5_7(id);
 
-update ASSIGNMENT5 as t join ASSIGNMENT5_7 as n on t.name = n.description set t.as_id = n.id;
+INSERT INTO ASSIGNMENT5_7 (description)  values ( 'Caeleb Dressel'), ( 'Michael Phelp'), ( 'Leon Marchand'),('Mikko Rantanen'), ('Cale Makar');
+
+UPDATE ASSIGNMENT5 AS a5
+JOIN ASSIGNMENT5_7 AS a57 ON a5.name = a57.description
+SET a5.assignment5_7_id = a57.id;
+
