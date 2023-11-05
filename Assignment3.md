@@ -1,6 +1,13 @@
 ## Question 1
 
- **Write a statement to SELECT all of the columns in the DEPARTMENT table  ( 5 marks )**
+ *Question 1 (10 marks)
+ 
+ a) Create two tables with the same numbers of columns and datatypes (mininum 3 columns in each table) (3 marks)
+ 
+ b) Populate that table with data (3 marks)
+ 
+ c) Create a SELECT statement for each table and UNION them together (4 marks)
+**
  
  ```
  select * from DEPARTMENT;
