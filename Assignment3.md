@@ -21,7 +21,44 @@ Create Table es_table02 (
     type INT
 );
  ```
-
+ ```
+  INSERT INTO es_table02 (label, type) VALUES
+ ('Anaheim Ducks', 4),
+ ('Arizona Coyotes', 3),
+ ('Boston Bruins', 1),
+ ('Buffalo Sabres', 1),
+ ('Calgary Flames', 4),
+ ('Carolina Hurricanes', 2),
+ ('Chicago Blackhawks', 3),
+ ('Colorado Avalanche', 3),
+ ('Columbus Blue Jackets', 2),
+ ('Dallas Stars', 3),
+ ('Detroit Red Wings', 1),
+ ('Edmonton Oilers', 4),
+ ('Florida Panthers', 1),
+ ('Los Angeles Kings', 4),
+ ('Minnesota Wild', 3),
+ ('Montreal Canadiens', 1),
+ ('Nashville Predators', 3),
+ ('New Jersey Devils', 2),
+ ('New York Islanders', 2),
+ ('New York Rangers', 2),
+ ('Ottawa Senators', 1),
+ ('Philadelphia Flyers', 2),
+ ('Pittsburgh Penguins', 2),
+ ('San Jose Sharks', 4),
+ ('Seattle Kraken', 4),
+ ('St. Louis Blues', 3),
+ ('Tampa Bay Lightning', 1),
+ ('Toronto Maple Leafs', 1),
+ ('Vancouver Canucks', 4),
+ ('Vegas Golden Knights', 4),
+ ('Washington Capitals', 2),
+ ('Winnipeg Jets', 3);
+ ```
+ ```
+ Select label, type from es_table01 union select label, type from es_table02;
+ ```
 
 | DEPTNO | DEPTNAME | MGRNO | ADMRDEPT | LOCATION |
 | :--- | :--- | :--- | :--- | :--- |
