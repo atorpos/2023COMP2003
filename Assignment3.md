@@ -122,7 +122,12 @@ select WORKDEPT as `department_number`, EMPNO as `employee_number`, SALARY from 
 
 ## Question 3
 
-**Write a statement to SELECT all of the columns from the PROJECT table where there is more than 3 PRSTAFF  ( 5 marks )**
+**a )  Write a query that uses NATURAL JOIN TO connect the EMPLOYEE and EMPPROJACT table.   Include the Employee number , First and Last name, Salary, Salary increased by 3% and Project number      ( 3 marks )
+ 
+b) Use INNER JOIN OR JOIN with the same query with USING statement   ( 3 marks )
+
+ 
+c) Use INNER JOIN OR JOIN with the same query with joined columns (hint a = a )    ( 4 marks )**
 
 ```
 select * from PROJECT where PRSTAFF > 3;
