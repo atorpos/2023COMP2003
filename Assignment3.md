@@ -60,38 +60,65 @@ Create Table es_table02 (
  Select label, type from es_table01 union select label, type from es_table02;
  ```
 
-| DEPTNO | DEPTNAME | MGRNO | ADMRDEPT | LOCATION |
-| :--- | :--- | :--- | :--- | :--- |
-| A00 | SPIFFY COMPUTER SERVICE DIV. | 000010 | A00 |  |
-| B01 | PLANNING | 000020 | A00 |  |
-| C01 | INFORMATION CENTER | 000030 | A00 |  |
-| D01 | DEVELOPMENT CENTER |  | A00 |  |
-| D11 | MANUFACTURING SYSTEMS | 000060 | D01 |  |
-| D21 | ADMINISTRATION SYSTEMS | 000070 | D01 |  |
-| E01 | SUPPORT SERVICES | 000050 | A00 |  |
-| E11 | OPERATIONS | 000090 | E01 |  |
-| E21 | SOFTWARE SUPPORT | 000100 | E01 |  |
-| F22 | BRANCH OFFICE F2 |  | E01 |  |
-| G22 | BRANCH OFFICE G2 |  | E01 |  |
-| H22 | BRANCH OFFICE H2 |  | E01 |  |
-| I22 | BRANCH OFFICE I2 |  | E01 |  |
-| J22 | BRANCH OFFICE J2 |  | E01 |  |
+| label | type |
+| :--- | :--- |
+| Anaheim Ducks | 4 |
+| Arizona Coyotes | 3 |
+| Boston Bruins | 1 |
+| Buffalo Sabres | 1 |
+| Calgary Flames | 4 |
+| Carolina Hurricanes | 2 |
+| Chicago Blackhawks | 3 |
+| Colorado Avalanche | 3 |
+| Columbus Blue Jackets | 2 |
+| Dallas Stars | 3 |
+| Detroit Red Wings | 1 |
+| Edmonton Oilers | 4 |
+| Florida Panthers | 1 |
+| Los Angeles Kings | 4 |
+| Minnesota Wild | 3 |
+| Montreal Canadiens | 1 |
+| Nashville Predators | 3 |
+| New Jersey Devils | 2 |
+| New York Islanders | 2 |
+| New York Rangers | 2 |
+| Ottawa Senators | 1 |
+| Philadelphia Flyers | 2 |
+| Pittsburgh Penguins | 2 |
+| San Jose Sharks | 4 |
+| Seattle Kraken | 4 |
+| St. Louis Blues | 3 |
+| Tampa Bay Lightning | 1 |
+| Toronto Maple Leafs | 1 |
+| Vancouver Canucks | 4 |
+| Vegas Golden Knights | 4 |
+| Washington Capitals | 2 |
+| Winnipeg Jets | 3 |
+
 
 ## Question 2
 
-**Write a statement to SELECT all of the columns in the EMPLOYEE table but only return 5 rows   ( 5 marks )**
+**Create a query that lists the department number, employee number, and salaries of all employees in department D11.  
+ UNION the same information , but this time sum up all the salaries to create a one line summary entry for the D11 department (hint sum the salary).  Sort the list by Salary.**
 
 ```
-select * from EMPLOYEE limit 5;
+select WORKDEPT as `department_number`, EMPNO as `employee_number`, SALARY from EMPLOYEE where WORKDEPT= 'D11';
 ```
 
-| EMPNO | FIRSTNME | MIDINIT | LASTNAME | WORKDEPT | PHONENO | HIREDATE | JOB | EDLEVEL | GENDER | BIRTHDATE | SALARY | BONUS | COMM |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 000010 | CHRISTINE | I | HAAS | A00 | 3978 | 1995-01-01 | PRES | 18 | F | 1963-08-24 | 152750.00 | 1000.00 | 4220.00 |
-| 000020 | MICHAEL | L | THOMPSON | B01 | 3476 | 2003-10-10 | MANAGER | 18 | M | 1978-02-02 | 94250.00 | 800.00 | 3300.00 |
-| 000030 | SALLY | A | KWAN | C01 | 4738 | 2005-04-05 | MANAGER | 20 | F | 1971-05-11 | 98250.00 | 800.00 | 3060.00 |
-| 000050 | JOHN | B | GEYER | E01 | 6789 | 1979-08-17 | MANAGER | 16 | M | 1955-09-15 | 80175.00 | 800.00 | 3214.00 |
-| 000060 | IRVING | F | STERN | D11 | 6423 | 2003-09-14 | MANAGER | 16 | M | 1975-07-07 | 72250.00 | 500.00 | 2580.00 |
+| department\_number | employee\_number | SALARY |
+| :--- | :--- | :--- |
+| D11 | 000060 | 72250.00 |
+| D11 | 000150 | 55280.00 |
+| D11 | 000160 | 62250.00 |
+| D11 | 000170 | 44680.00 |
+| D11 | 000180 | 51340.00 |
+| D11 | 000190 | 50450.00 |
+| D11 | 000200 | 57740.00 |
+| D11 | 000210 | 68270.00 |
+| D11 | 000220 | 49840.00 |
+| D11 | 200170 | 64680.00 |
+| D11 | 200220 | 69840.00 |
+
 
 ## Question 3
 
