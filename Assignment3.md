@@ -10,7 +10,16 @@
 **
  
  ```
- select * from DEPARTMENT;
+ Create TABLE es_table01 (
+    id INT auto_increment primary key ,
+    label VARCHAR(255),
+    type INT
+);
+Create Table es_table02 (
+    id INT auto_increment primary key ,
+    label VARCHAR(255),
+    type INT
+);
  ```
 
 
