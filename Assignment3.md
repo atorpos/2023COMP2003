@@ -1,6 +1,6 @@
 ## Question 1
 
- *Question 1 (10 marks)
+ **Question 1 (10 marks)**
  
  a) Create two tables with the same numbers of columns and datatypes (mininum 3 columns in each table) (3 marks)
  
